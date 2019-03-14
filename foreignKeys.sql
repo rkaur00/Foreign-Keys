@@ -1,6 +1,3 @@
-```
-Create database todoList
-```
 create database todoList;    
 
 use todoList;
@@ -10,6 +7,7 @@ CREATE TABLE projects (
             projectName varchar(100)  NOT NULL, 
             PRIMARY KEY (projectID) 
           )   
+
 
 CREATE TABLE todoItems ( 
             todoID int  NOT NULL auto_increment, 
@@ -22,9 +20,7 @@ CREATE TABLE todoItems (
 
 ALTER TABLE projects ADD INDEX project_index(projectName);
 
-ALTER TABLE projects  
-          
-ADD COLUMN projectDescription text not null AFTER projectName;  
+ALTER TABLE projects ADD COLUMN projectDescription text not null AFTER projectName;  
 
 ALTER TABLE todoItems ADD INDEX todo_index(todoItem);  
 
@@ -32,6 +28,7 @@ ALTER TABLE todoItems
                     ADD FOREIGN KEY fk_project(`projectID`)  
                     REFERENCES projects (projectID) 
           ON UPDATE CASCADE ON DELETE RESTRICT;
+
 
 INSERT INTO projects (projectName,`projectDescription`) 
           VALUES ('project1','It is also team project');  
