@@ -1,2 +1,2 @@
 # Foreign-Keys
-Implementing tconcept of foreign keys to connect two tables
+Implementing the concept of foreign keys to connect two tables.
