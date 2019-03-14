@@ -1,3 +1,6 @@
+```
+Create database todoList
+```
 create database todoList;    
 
 use todoList;
